@@ -48,7 +48,7 @@
 #define WIFI_SCAN_ALL 6
 #define WIFI_PACKET_MONITOR 7
 #define WIFI_ATTACK_BEACON_SPAM 8
-#define WIFI_ATTACK_RICK_ROLL 9
+#define WIFI_ATTACK_BELICO 9
 #define BT_SCAN_ALL 10
 #define BT_SCAN_SKIMMERS 11
 #define WIFI_SCAN_ESPRESSIF 12
@@ -148,15 +148,15 @@ class WiFiScan
     //String connected_network = "";
     String alfa = "1234567890qwertyuiopasdfghjkklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM_";
 
-    char* rick_roll[8] = {
-      "01 Never gonna give you up",
-      "02 Never gonna let you down",
-      "03 Never gonna run around",
-      "04 and desert you",
-      "05 Never gonna make you cry",
-      "06 Never gonna say goodbye",
-      "07 Never gonna tell a lie",
-      "08 and hurt you"
+    char* belico[8] = {
+      "01 Mercedes AMG",
+      "02 Clase G-63",
+      "03 Lo que un día soñe",
+      "04 Todo ya me lo compré",
+      "05 Muy bueno para las cuentas",
+      "06 Todo apunto en la libreta",
+      "07 Ahí traingo la lista negra",
+      "08 Pal que se pase de verga"
     };
 
     char* prefix = "G";

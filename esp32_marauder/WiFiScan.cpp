@@ -316,7 +316,7 @@ void WiFiScan::StartScan(uint8_t scan_mode, uint16_t color)
     this->startWiFiAttacks(scan_mode, color, text_table1[50]);
   else if (scan_mode == WIFI_ATTACK_BEACON_SPAM)
     this->startWiFiAttacks(scan_mode, color, text_table1[51]);
-  else if (scan_mode == WIFI_ATTACK_RICK_ROLL)
+  else if (scan_mode == WIFI_ATTACK_BELICO)
     this->startWiFiAttacks(scan_mode, color, text_table1[52]);
   else if (scan_mode == WIFI_ATTACK_AUTH)
     this->startWiFiAttacks(scan_mode, color, text_table4[7]);
@@ -467,7 +467,7 @@ void WiFiScan::StopScan(uint8_t scan_mode)
   (currentScanMode == WIFI_ATTACK_DEAUTH_MANUAL) ||
   (currentScanMode == WIFI_ATTACK_DEAUTH_TARGETED) ||
   (currentScanMode == WIFI_ATTACK_MIMIC) ||
-  (currentScanMode == WIFI_ATTACK_RICK_ROLL) ||
+  (currentScanMode == WIFI_ATTACK_BELICO) ||
   (currentScanMode == WIFI_PACKET_MONITOR) ||
   (currentScanMode == LV_JOIN_WIFI))
   {
@@ -3674,15 +3674,15 @@ void WiFiScan::main(uint32_t currentTime)
       packets_sent = 0;
     }
   }
-  else if ((currentScanMode == WIFI_ATTACK_RICK_ROLL))
+  else if ((currentScanMode == WIFI_ATTACK_BELICO))
   {
     // Need this for loop because getTouch causes ~10ms delay
     // which makes beacon spam less effective
     for (int i = 0; i < 7; i++)
     {
-      for (int x = 0; x < (sizeof(rick_roll)/sizeof(char *)); x++)
+      for (int x = 0; x < (sizeof(belico)/sizeof(char *)); x++)
       {
-        broadcastSetSSID(currentTime, rick_roll[x]);
+        broadcastSetSSID(currentTime, belico[x]);
       }
     }
 

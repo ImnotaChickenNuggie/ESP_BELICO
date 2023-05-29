@@ -56,7 +56,7 @@ extern Settings settings_obj;
 #define SNIFFERS 10
 #define WIFI 11
 #define BEACON_SPAM 12
-#define RICK_ROLL 13
+#define BELICO 13
 #define REBOOT 14
 #define GENERAL_APPS 15
 #define UPDATE 16
